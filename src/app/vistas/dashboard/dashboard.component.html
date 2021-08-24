@@ -1,0 +1,36 @@
+<app-header></app-header>
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Pacientes</h3>
+      <br>
+      <button type="button" class="btn btn-primary"  (click)="nuevoPaciente()">Nuevo Paciente</button>
+    </div>
+    <div class="card-body">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id Paciente</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Pacientes of pacientes" (click)="editarPaciente(Pacientes.PacienteId)">
+        <th scope="row">{{Pacientes.PacienteId}}</th>
+        <td>{{Pacientes.Nombre}}</td>
+        <td>{{Pacientes.DNI}}</td>
+        <td>{{Pacientes.Telefono}}</td>
+        <td>{{Pacientes.Correo}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<br>
+</div>
+<br>
+<app-footer></app-footer>

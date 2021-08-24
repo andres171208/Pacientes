@@ -1,0 +1,64 @@
+<app-header></app-header>
+<br>
+<br>
+<div class="container">
+  <div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        Editar Paciente
+      </div>
+      <div class="card-body">
+        <form [formGroup]="editarForm">
+          <div class="form-group">
+            <label for="nombrePaciente">Nombre</label>
+            <input  type="text" class="form-control" id="nombre" name="nombre" formControlName="nombre" placeholder="Nombre">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="dniPaciente">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder="DNI">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="correoPaciente">Correo</label>
+            <input type="email" class="form-control" id="correo"  placeholder="correo">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="codigoPostal">Codigo Postal</label>
+            <input type="text" class="form-control" id="codigopostal" placeholder="Codigo Postal">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="generoPaciente">genero</label>
+            <select class="form-control" id="genero">
+              <option value="">Seleccione una opcion...</option>
+              <option value="M">Masculino</option>
+              <option value="F">Femenino</option>
+            </select>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="telefonoPaciente">Telefono</label>
+            <input type="number" class="form-control" id="telefono" placeholder="Telefono">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="fechanacimiento">fechaNacimiento</label>
+            <input type="date" class="form-control" id="fechaN" placeholder="Fecha de Naciemiento">
+          </div>
+          <br>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>
+
